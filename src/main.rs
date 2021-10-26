@@ -60,12 +60,12 @@ impl SVGPathPen {
 
     fn curve_to(&mut self, pt: &[Point]) {
         consider_min_max(self, pt);
-        self.extend_path(&format!("C {} {} {} {} {} {}", pt[0].x, -pt[0].y, pt[1].x, -pt[1].y, pt[2].x, -pt[2].y));
+        self.extend_path(&format!("C {} {} {} {} {} {}", pt[1].x, -pt[1].y, pt[2].x, -pt[2].y, pt[3].x, -pt[3].y));
     }
 
     fn qcurve_to(&mut self, pt: &[Point]) {
         consider_min_max(self, pt);
-        self.extend_path(&format!("Q {} {} {} {}", pt[0].x, -pt[0].y, pt[1].x, -pt[1].y));
+        self.extend_path(&format!("Q {} {} {} {}", pt[1].x, -pt[1].y, pt[2].x, -pt[2].y));
     }
 
     fn close_path(&mut self) {

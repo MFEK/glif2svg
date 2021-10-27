@@ -133,7 +133,7 @@ fn main() {
             for (verb, pts) in iter {
                 match verb {
                     Verb::Move => svg.move_to(pts[0]),
-                    Verb::Line => svg.line_to(pts[0]),
+                    Verb::Line => svg.line_to(pts[1]),
                     Verb::Quad => svg.qcurve_to(&pts),
                     Verb::Cubic => svg.curve_to(&pts),
                     Verb::Close => svg.close_path(),

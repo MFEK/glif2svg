@@ -394,7 +394,7 @@ dependencies = [
 
 [[package]]
 name = "glif2svg"
-version = "1.0.0-beta1"
+version = "1.0.0"
 dependencies = [
  "clap",
  "derivative",
